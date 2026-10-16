@@ -13,11 +13,11 @@
 <script>
 const protocol = new pmtiles.Protocol();
 maplibregl.addProtocol("pmtiles", protocol.tile);
-const p = new pmtiles.PMTiles("https://github.com/cexplayer01/texas-pmtiles/releases/download/texas-2026.10.16/texas.pmtiles");
+const p = new pmtiles.PMTiles("https://texas-tiles.netlify.app/texas.pmtiles");
 protocol.add(p);
 const style = {
   version: 8,
-  sources: { tx: { type: "vector", url: "pmtiles://https://github.com/cexplayer01/texas-pmtiles/releases/download/texas-2026.10.16/texas.pmtiles" } },
+  sources: { tx: { type: "vector", url: "pmtiles://https://texas-tiles.netlify.app/texas.pmtiles" } },
   layers: [
     { id: "bg", type: "background", paint: { "background-color": "#0b0e13" } },
     { id: "water", type: "fill", source: "tx", "source-layer": "water",
